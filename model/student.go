@@ -26,13 +26,13 @@ type CreateStudentRequest struct {
 	Nama        string   `json:"nama" validate:"required"`
 	Email       string   `json:"email" validate:"required,email"`
 	Prodi       string   `json:"prodi" validate:"required"`
-	Angkatan    int      `json:"angkatan" validate:"required,min=2000,max=2026"`
+	Angkatan    int      `json:"angkatan" validate:"required,min=2000,max_current_year"`
 	IPKTerakhir *float64 `json:"ipk_terakhir,omitempty" validate:"omitempty,min=0,max=4"`
 }
 
 type UpdateStudentRequest struct {
 	Nama        string   `json:"nama" validate:"required"`
 	Prodi       string   `json:"prodi" validate:"required"`
-	Angkatan    int      `json:"angkatan" validate:"required,min=2000,max=2026"`
+	Angkatan    int      `json:"angkatan" validate:"required,min=2000,max_current_year"`
 	IPKTerakhir *float64 `json:"ipk_terakhir,omitempty" validate:"omitempty,min=0,max=4"`
 }

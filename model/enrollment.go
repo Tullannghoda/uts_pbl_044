@@ -20,5 +20,5 @@ type EnrolledCourse struct {
 
 type CreateEnrollmentRequest struct {
 	CourseID      int    `json:"course_id" validate:"required"`
-	TahunAkademik string `json:"tahun_akademik" validate:"required"`
+	TahunAkademik string `json:"tahun_akademik" validate:"required,tahun_akademik"`
 }
